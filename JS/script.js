@@ -34,7 +34,6 @@ const mostrarAficiones = () => {
 
 }
 
-// const eliminarAficion = () => {
 
 // }
 
@@ -194,7 +193,6 @@ const eliminarUsuario = (index) => {
 const editarUsuario = (index) => {
   const user = usuarios[index];
 
-  // Llenar los campos con los datos del usuario
   document.getElementById("username").value = user.username;
   document.getElementById("password").value = user.password;
   document.getElementById("confirmPassword").value = user.password;
@@ -203,19 +201,15 @@ const editarUsuario = (index) => {
   document.getElementById("telefono").value = user.telefono;
   document.getElementById("paginaWeb").value = user.paginaWeb;
 
-  // Cargar aficiones en modo edición (sin botones eliminar)
   const lista = document.getElementById("listaAficiones");
   lista.innerHTML = "";
   user.aficiones.forEach(af => {
-    // const li = document.createElement("li");
     console.log('AF EDITAR', af)
     aficionesArr.push(af)
-    // li.textContent = af;
-    // lista.appendChild(li);
   });
   mostrarAficiones()
   console.log('AFICIONES ARR EDITAR', aficionesArr)
-  // Eliminar al usuario actual para que pueda ser reinsertado editado
+
   usuarios.splice(index, 1);
   mostrarUsuarios();
 }
@@ -242,7 +236,6 @@ formulario.addEventListener("submit", function (e) {
   const paginaWeb = document.getElementById("paginaWeb").value.trim();
   const aficiones = document.querySelectorAll("#listaAficiones li");
 
-  // Limpia errores anteriores
   document.querySelectorAll(".error").forEach(el => el.textContent = "")
 
 
