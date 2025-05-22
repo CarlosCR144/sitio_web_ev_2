@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Formulario de Registro</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <form id="registroForm">
+      <h2>Formulario de Registro</h2>
+
+      <label
+        >Nombre de usuario:
+        <input type="text" id="username" />
+        <span class="error" id="usernameError"></span>
+      </label>
+
+      <label
+        >Contraseña:
+        <input type="password" id="password" />
+        <span class="error" id="passwordError"></span>
+      </label>
+
+      <label
+        >Confirmar contraseña:
+        <input type="password" id="confirmPassword" />
+        <span class="error" id="confirmPasswordError"></span>
+      </label>
+
+      <label
+        >Dirección:
+        <input type="text" id="direccion" />
+        <span class="error" id="direccionError"></span>
+      </label>
+
+      <label
+        >Comuna:
+        <select id="comuna">
+          <option value="">Seleccione comuna</option>
+          <option value="Valdivia">Valdivia</option>
+          <option value="Mariquina">Mariquina</option>
+          <option value="Máfil">Máfil</option>
+        </select>
+        <span class="error" id="comunaError"></span>
+      </label>
+
+      <label
+        >Teléfono:
+        <input type="text" id="telefono" />
+        <span class="error" id="telefonoError"></span>
+      </label>
+
+      <label
+        >Página web personal:
+        <input type="text" id="paginaWeb" />
+        <span class="error" id="paginaWebError"></span>
+      </label>
+
+      <label
+        >Aficiones:
+        <input type="text" id="aficionInput" />
+        <button type="button" id="agregarAficion">Agregar</button>
+        <span class="error" id="aficionError"></span>
+      </label>
+      <ul id="listaAficiones"></ul>
+
+      <button id="registrarBtn" type="submit">Registrar</button>
+    </form>
+
+    <hr>
+
+    <h3>Usuarios registrados</h3>
+    <div id="usuariosList"></div>
+
+
+    <script src="JS/script.js"></script>
+  </body>
+</html>

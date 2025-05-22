@@ -1,0 +1,41 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 40px;
+  background-color: #f4f4f4;
+}
+
+form {
+  background: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  max-width: 500px;
+  margin: auto;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+label {
+  display: block;
+  margin-bottom: 15px;
+}
+
+input, select, button {
+  display: block;
+  margin-top: 5px;
+  padding: 8px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+#registrarBtn {
+  background-color: rgb(14, 124, 192);
+  border: none;
+}
+
+#registrarBtn:hover {
+  background-color: rgb(40, 152, 222);
+}
+
+.error {
+  color: red;
+  font-size: 0.85em;
+}
