@@ -35,8 +35,6 @@ const mostrarAficiones = () => {
 }
 
 
-// }
-
 const agregarAficion = () => {
   const input = document.getElementById("aficionInput");
   const error = document.getElementById("aficionError");
@@ -115,11 +113,9 @@ const validarDireccion = (direccion) => {
 
 const validarComuna = (comuna) => {
   if (comuna === "") {
-    document.getElementById("comunaError").textContent = "Debe seleccionar una comuna.";
-    return false;
+    return 'N/A';
   } else {
-    document.getElementById("comunaError").textContent = "";
-    return true;
+    return comuna;
   }
 }
 
@@ -255,9 +251,7 @@ formulario.addEventListener("submit", function (e) {
     valid = false;
   }
 
-  if (!validarComuna(comuna)) {
-    valid = false
-  }
+  let validComuna = validarComuna(comuna)
 
   if (!validarTelefono(telefono)) {
     valid = false
@@ -280,7 +274,7 @@ formulario.addEventListener("submit", function (e) {
       username: username,
       password: password,
       direccion: direccion,
-      comuna: comuna,
+      comuna: validComuna,
       telefono: telefono,
       paginaWeb: paginaWeb,
       aficiones: aficionesArr
